@@ -59,7 +59,7 @@ public class TripServiceTest {
 
         TripDaoMock tripDaoMock=new TripDaoMock();
         TripService tripService=new TripServiceMock();
-        assertThat(tripService.isFriendMyFriend(user,user2,false)).isEqualTo(true);
+        assertThat(tripService.isFriendMyFriend(user,user2)).isEqualTo(true);
     }
 
     @Test
@@ -70,7 +70,7 @@ public class TripServiceTest {
         user.addFriend(user3);
 
         TripService tripService=new TripServiceMock();
-        assertThat(tripService.isFriendMyFriend(user,user2,false)).isEqualTo(false);
+        assertThat(tripService.isFriendMyFriend(user,user2)).isEqualTo(false);
     }
 
 
